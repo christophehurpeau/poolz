@@ -1,0 +1,8 @@
+name: poolz
+description: A sample dart angular application
+dependencies:
+  browser: any
+  angular: any
+  google_maps: any
+  meta: any
+  

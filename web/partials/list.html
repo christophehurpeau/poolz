@@ -1,0 +1,29 @@
+<div list-controller ng-cloak>
+  <h2>Liste des piscines de Paris</h2>
+  
+  <gmap-all-pools style="height: 400px; width: 100%" markers="list.markers | filter:{name: list.filterText}"></gmap-all-pools>
+  
+  
+  <p>
+      Search: <input type="text" ng-model="list.filterText" />
+  </p>
+
+  
+  <table class="pointer">
+      <thead>
+        <tr>
+          <th ng-click="list.sortBy('zipcode')">Quartier</th>
+          <th ng-click="list.sortBy('name')">Piscine</th>
+          <th ng-click="list.sortBy('address')">Adresse</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="pool in list.pools | filter:{name: list.filterText} | orderBy:list.currentSort:list.isReverse" ng-click="list.viewPool($index)">
+            <td>{{ pool.zipcode | district }}</td>
+            <td>{{ pool.name }}</td>
+            <td>{{ pool.address }}</td>
+        </tr>
+      </tbody>
+  </table>
+
+</div>

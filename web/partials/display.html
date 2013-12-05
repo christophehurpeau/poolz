@@ -1,0 +1,22 @@
+<div display-controller ng-cloak>
+  <div ng-hide="pool != null"><h1>Erreur</h1></div>
+  <div ng-hide="pool == null">
+    <h1>{{ pool.name }}</h1>
+    <p>Les infos sur <a href="{{ pool.url }}">le site de Paris</a></p>
+    
+    <table>
+        <tbody>
+            <tr>
+                <td>Adresse</td>
+                <td>{{ pool.address }}</td>
+            </tr>
+            <tr>
+                <td>Quartier</td>
+                <td>{{ computedDistrict  }}</td>
+            </tr>
+        </tbody>
+    </table>
+  
+    <gmap style="width:400px; height:400px"  latitude="pool.lat" longitude="pool.lng" name="pool.name"></gmap>
+  </div>
+</div>
