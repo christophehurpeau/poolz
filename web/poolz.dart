@@ -1,5 +1,5 @@
 import 'package:angular/angular.dart';
-import 'package:poolz/app.dart';
+import '../lib/app.dart';
 
 main(){
   ngBootstrap(module: poolzModule());
