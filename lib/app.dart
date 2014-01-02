@@ -6,6 +6,7 @@ import 'dart:async';
 //import 'dart:convert' show JSON;
 
 import 'package:angular/angular.dart';
+import 'package:angular/core/service.dart';
 
 import 'package:google_maps/google_maps.dart' as GMap;
 

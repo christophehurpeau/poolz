@@ -1,6 +1,6 @@
 part of poolz;
 
-//@NgInjectableService
+@NgInjectableService()
 class SortService {
   String _currentSortValue = 'name';
   bool _isReverse = false;

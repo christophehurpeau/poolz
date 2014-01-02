@@ -1,6 +1,6 @@
 part of poolz;
 
-//@NgInjectableService
+@NgInjectableService()
 class PoolService{
   Http _http;
   
@@ -37,14 +37,5 @@ class PoolService{
   Map getPoolByIndex(int index) {
     return _list[index];
   }
-  
-}
-
-class TestService{
-  String _value;
-  TestService(){
-    _value = whatYouWant() ? "Dev" : "Prod";
-  }
-  
   
 }
